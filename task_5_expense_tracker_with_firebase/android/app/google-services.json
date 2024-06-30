@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "988825621508",
+    "project_id": "trackerappclone",
+    "storage_bucket": "trackerappclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988825621508:android:7c0d2416672c4933549151",
+        "android_client_info": {
+          "package_name": "com.ahsan123"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW4VvlI5ehlbjHdEUMTcLilZaX8BoiBPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
