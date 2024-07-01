@@ -37,6 +37,15 @@ class ExpenseData extends ChangeNotifier {
     notifyListeners();
     db.savedData(overallExpenseList);
   }
+  //edit
+  void editExpense(ExpenseItem oldExpense, ExpenseItem newExpense) {
+    int index = overallExpenseList.indexOf(oldExpense);
+    if (index != -1) {
+      overallExpenseList[index] = newExpense;
+      notifyListeners();
+      db.savedData(overallExpenseList);
+    }
+  }
   // day
 String getDayName(DateTime dateTime)
 {

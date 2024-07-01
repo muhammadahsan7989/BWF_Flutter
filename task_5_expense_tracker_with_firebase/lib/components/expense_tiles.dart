@@ -5,13 +5,15 @@ class ExpenseTiles extends StatelessWidget {
   final String name;
   final String amount;
   final DateTime dateTime;
-  void Function(BuildContext)? deleteTapped;
+  final void Function(BuildContext)? editTapped;
+  final void Function(BuildContext)? deleteTapped;
    ExpenseTiles(
       {super.key,
       required this.name,
       required this.amount,
       required this.dateTime,
-      required this.deleteTapped});
+      required this.deleteTapped,
+      required this.editTapped});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,13 @@ class ExpenseTiles extends StatelessWidget {
             onPressed: deleteTapped,
         icon: Icons.delete,
         backgroundColor: Colors.red,
-        borderRadius: BorderRadius.circular(20),)
+        borderRadius: BorderRadius.circular(20),),
+        SlidableAction( // Add this block
+          onPressed: editTapped,
+          icon: Icons.edit,
+          backgroundColor: Colors.blue,
+          borderRadius: BorderRadius.circular(20),
+        ),
       ]),
       child: ListTile(
         title: Text(name),
